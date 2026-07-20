@@ -50,6 +50,7 @@ function App() {
         <h2>Shahriar Oishik</h2>
         <div>
           <a href="#about">About</a>
+          <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
@@ -58,7 +59,7 @@ function App() {
 
       <section className="hero">
         <h1>Hello, I am Shahriar</h1>
-        <p>CS Student @ East West University | AI & ML Enthusiast</p>
+        <p>CS Student @ East West University | UTA | Competitive Programmer</p>
         <div className="social-links">
           <a href="https://github.com/ShahriarOishik" target="_blank" rel="noreferrer" className="social-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -76,30 +77,110 @@ function App() {
       <section id="about">
         <h2>About Me</h2>
         <p>
-          I am a Computer Science Student at East West University, immersing myself
-          in the fascinating world of AI and Machine Learning. Currently discovering
-          the twists and turns of AI courses, where algorithms become my puzzle pieces.
-          As a student, I'm not just chasing grades; I'm on a journey of self-discovery
-          and growth. I love collaborating on projects and exploring new technologies.
+          I am a Computer Science Student at East West University with a passion
+          for AI, Machine Learning, and problem-solving. As an Undergraduate
+          Teaching Assistant, I help fellow students master programming concepts
+          and algorithms. Outside the classroom, I compete in programming
+          contests and love turning complex problems into elegant solutions.
         </p>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <div className="experience-list">
+          <div className="experience-card">
+            <div className="experience-header">
+              <h3>Undergraduate Teaching Assistant</h3>
+              <span className="experience-date">2024 — Present</span>
+            </div>
+            <p className="experience-company">East West University — Dept. of CSE</p>
+            <ul className="experience-details">
+              <li>Assist professors in course delivery and academic support for undergraduate students</li>
+              <li>Provide technical mentorship on programming concepts, data structures, and algorithms</li>
+              <li>Grade assignments and manage digital resources for faculty-student communication</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="achievements">
+        <h2>Achievements</h2>
+        <div className="achievements-grid">
+          <div className="achievement-card">
+            <div className="achievement-number">3.92</div>
+            <p>CGPA on a 4.0 scale</p>
+          </div>
+          <div className="achievement-card">
+            <div className="achievement-number">UTA</div>
+            <p>Undergraduate Teaching Assistant</p>
+          </div>
+          <div className="achievement-card">
+            <div className="achievement-number">5+</div>
+            <p>GitHub Projects</p>
+          </div>
+          <div className="achievement-card">
+            <div className="achievement-number">EWU</div>
+            <p>Computer Science, BE</p>
+          </div>
+        </div>
       </section>
 
       <section id="skills">
         <h2>Skills</h2>
-        <ul className="skills-list">
-          <li>Python</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>Java</li>
-          <li>C</li>
-          <li>C++</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>AI & ML</li>
-          <li>Git</li>
-        </ul>
+        <div className="skills-categories">
+          <div className="skill-group">
+            <h3>Languages</h3>
+            <ul className="skills-list">
+              <li>Python</li>
+              <li>Java</li>
+              <li>C</li>
+              <li>C++</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+          <div className="skill-group">
+            <h3>Web Development</h3>
+            <ul className="skills-list">
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+          <div className="skill-group">
+            <h3>Tools & Concepts</h3>
+            <ul className="skills-list">
+              <li>Git & GitHub</li>
+              <li>AI & ML</li>
+              <li>Data Structures</li>
+              <li>Algorithms</li>
+              <li>OOP</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="languages">
+        <h2>Languages</h2>
+        <div className="languages-grid">
+          <div className="language-card">
+            <span className="language-name">Bangla</span>
+            <span className="language-level">Native</span>
+          </div>
+          <div className="language-card">
+            <span className="language-name">English</span>
+            <span className="language-level">Professional</span>
+          </div>
+          <div className="language-card">
+            <span className="language-name">Hindi</span>
+            <span className="language-level">Conversational</span>
+          </div>
+          <div className="language-card">
+            <span className="language-name">Japanese</span>
+            <span className="language-level">Basic</span>
+          </div>
+        </div>
       </section>
 
       <section id="projects">
@@ -124,30 +205,39 @@ function App() {
 
       <section id="contact">
         <h2>Contact Me</h2>
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          <textarea
-            name="message"
-            placeholder="Your message"
-            rows="5"
-            value={formData.message}
-            onChange={handleChange}
-          />
-          <button type="submit">Send</button>
-        </form>
+        <div className="contact-content">
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <textarea
+              name="message"
+              placeholder="Your message"
+              rows="5"
+              value={formData.message}
+              onChange={handleChange}
+            />
+            <button type="submit">Send</button>
+          </form>
+          <div className="contact-info">
+            <p>Or reach me directly:</p>
+            <div className="contact-links">
+              <a href="https://github.com/ShahriarOishik" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://bd.linkedin.com/in/shahriar-oishik" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
