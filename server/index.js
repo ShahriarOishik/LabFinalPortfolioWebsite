@@ -10,19 +10,43 @@ app.use(express.json());
 const projects = [
   {
     id: 1,
-    title: "Portfolio Website",
-    description: "A personal portfolio built with React and Express.",
-    tech: ["React", "Express", "CSS"],
-    github: "https://github.com/yourusername/portfolio",
-    demo: "https://your-demo-link.com"
+    title: "Metro Rail Ticketing System",
+    description: "A metro rail ticketing system built as a group project for EWU CSE103. Served as Team Lead & Backend Developer.",
+    tech: ["C"],
+    github: "https://github.com/ShahriarOishik/Metro-Rail-Ticketing-System",
+    demo: ""
   },
   {
     id: 2,
-    title: "Weather App",
-    description: "A simple weather application using API integration.",
-    tech: ["React", "API", "JavaScript"],
-    github: "https://github.com/yourusername/weather-app",
-    demo: "https://your-weather-demo.com"
+    title: "Library Management System",
+    description: "A library management system built for EWU CSE110 OOP course. Led the team as Team Lead & Full-Stack Developer.",
+    tech: ["Java", "CSS"],
+    github: "https://github.com/ShahriarOishik/Library-Management-System",
+    demo: ""
+  },
+  {
+    id: 3,
+    title: "QR Code Maker",
+    description: "A Python script that generates QR codes from any given data or URL.",
+    tech: ["Python"],
+    github: "https://github.com/ShahriarOishik/QR-code-maker",
+    demo: ""
+  },
+  {
+    id: 4,
+    title: "Chained Hashtable",
+    description: "Implementation of a Chained Hash Table data structure for efficient key-value storage and lookup.",
+    tech: ["C++"],
+    github: "https://github.com/ShahriarOishik/ChainedHastable",
+    demo: ""
+  },
+  {
+    id: 5,
+    title: "Portfolio Website",
+    description: "A full-stack portfolio website built with React and Express, deployed on Vercel and Render.",
+    tech: ["React", "Express", "Node.js"],
+    github: "https://github.com/ShahriarOishik/LabFinalPortfolioWebsite",
+    demo: ""
   }
 ];
 
