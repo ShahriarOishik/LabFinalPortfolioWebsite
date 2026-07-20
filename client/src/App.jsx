@@ -346,7 +346,7 @@ function App() {
               <span className="cp-platform-handle">@soulxer</span>
             </div>
             <div className="cp-platform-stats">
-              <span className="cp-stat"><strong>Active</strong> Competitor</span>
+              <span className="cp-stat"><strong>2★</strong> Coder</span>
             </div>
           </a>
           <a href="https://atcoder.jp/users/soulxer" target="_blank" rel="noreferrer" className="cp-platform-card">
