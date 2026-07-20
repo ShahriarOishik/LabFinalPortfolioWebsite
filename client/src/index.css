@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Press+Start+2P&display=swap');
 
 * {
   margin: 0;
@@ -463,75 +463,176 @@ section p {
   margin: 0 auto;
 }
 
-/* COMPETITIVE PROGRAMMING */
+/* COMPETITIVE PROGRAMMING — 8-BIT PIXEL THEME */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes cpGlow {
+  0%, 100% { box-shadow: 0 0 8px rgba(167,139,250,0.3), inset 0 0 8px rgba(167,139,250,0.05); }
+  50% { box-shadow: 0 0 16px rgba(167,139,250,0.5), inset 0 0 16px rgba(167,139,250,0.1); }
+}
+
+@keyframes hpPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes badgeFlicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+#competitive {
+  position: relative;
+  overflow: hidden;
+}
+
+.cp-scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.08) 2px,
+    rgba(0,0,0,0.08) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
 .cp-highlights {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .cp-card {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 24px 28px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.06);
-  background: rgba(255,255,255,0.02);
-  transition: all 0.3s;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: 0;
+  border: 2px solid rgba(167,139,250,0.3);
+  background: rgba(10,10,30,0.8);
+  image-rendering: pixelated;
+  transition: all 0.2s;
+  z-index: 2;
+}
+
+.cp-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 1px solid rgba(167,139,250,0.15);
+  pointer-events: none;
 }
 
 .cp-card:hover {
-  border-color: rgba(167,139,250,0.2);
+  border-color: rgba(167,139,250,0.6);
+  animation: cpGlow 1.5s ease infinite;
 }
 
 .cp-highlight {
-  border-color: rgba(167,139,250,0.25);
-  background: rgba(167,139,250,0.04);
+  border-color: rgba(251,191,36,0.5);
+  background: rgba(251,191,36,0.05);
+}
+
+.cp-highlight::before {
+  border-color: rgba(251,191,36,0.2);
+}
+
+.cp-highlight:hover {
+  animation: none;
+  box-shadow: 0 0 20px rgba(251,191,36,0.3), inset 0 0 20px rgba(251,191,36,0.05);
 }
 
 .cp-rank {
-  font-size: 28px;
-  font-weight: 700;
-  color: #a78bfa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
   flex-shrink: 0;
   min-width: 50px;
-  text-align: center;
+}
+
+.cp-rank-icon {
+  font-size: 24px;
+}
+
+.cp-rank-text {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  color: #fbbf24;
+  text-shadow: 0 0 10px rgba(251,191,36,0.5);
+}
+
+.cp-achievement-badge {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 7px;
+  color: #fbbf24;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  text-shadow: 0 0 6px rgba(251,191,36,0.4);
+  animation: badgeFlicker 2s ease infinite;
 }
 
 .cp-detail h3 {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   color: #e0e0e0;
   margin-bottom: 4px;
 }
 
 .cp-detail p {
-  font-size: 13px;
-  color: #666;
+  font-size: 12px;
+  color: #555;
   margin: 0;
 }
 
+/* PLATFORM CARDS */
 .cp-platforms {
   display: flex;
-  gap: 14px;
+  gap: 12px;
 }
 
 .cp-platform-card {
   flex: 1;
-  padding: 18px 20px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.06);
-  background: rgba(255,255,255,0.02);
+  padding: 16px 18px;
+  border-radius: 0;
+  border: 2px solid rgba(96,165,250,0.25);
+  background: rgba(10,10,30,0.8);
   text-decoration: none;
-  transition: all 0.3s;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 2;
+}
+
+.cp-platform-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 1px solid rgba(96,165,250,0.1);
+  pointer-events: none;
 }
 
 .cp-platform-card:hover {
-  border-color: rgba(167,139,250,0.3);
-  background: rgba(167,139,250,0.04);
+  border-color: rgba(96,165,250,0.5);
   transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(96,165,250,0.2);
 }
 
 .cp-platform-header {
@@ -542,29 +643,140 @@ section p {
 }
 
 .cp-platform-name {
-  font-size: 14px;
-  font-weight: 600;
-  color: #e0e0e0;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  color: #60a5fa;
+  text-shadow: 0 0 8px rgba(96,165,250,0.3);
 }
 
 .cp-platform-handle {
-  font-size: 12px;
-  color: #a78bfa;
+  font-size: 11px;
+  color: #555;
 }
 
+/* HP BAR */
+.cp-hp-bar {
+  position: relative;
+  width: 100%;
+  height: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.cp-hp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #34d399, #60a5fa);
+  transition: width 1s ease;
+  position: relative;
+}
+
+.cp-hp-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: rgba(255,255,255,0.15);
+}
+
+.cp-hp-chef {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.cp-hp-atcoder {
+  background: linear-gradient(90deg, #a78bfa, #c4b5fd);
+}
+
+.cp-hp-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 6px;
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.8);
+  z-index: 1;
+  animation: hpPulse 2s ease infinite;
+}
+
+/* STATS */
 .cp-platform-stats {
   display: flex;
-  gap: 14px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .cp-stat {
-  font-size: 12px;
-  color: #666;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 7px;
+  color: #555;
 }
 
 .cp-stat strong {
-  color: #ccc;
-  font-weight: 600;
+  color: #a0aec0;
+}
+
+/* RESPONSIVE — 8-BIT CP */
+@media (max-width: 768px) {
+  .cp-platforms {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cp-card {
+    padding: 16px 18px;
+    gap: 12px;
+  }
+
+  .cp-rank-icon {
+    font-size: 20px;
+  }
+
+  .cp-rank-text {
+    font-size: 12px;
+  }
+
+  .cp-achievement-badge {
+    font-size: 6px;
+  }
+
+  .cp-detail h3 {
+    font-size: 12px;
+  }
+
+  .cp-platform-header {
+    margin-bottom: 8px;
+  }
+
+  .cp-platform-name {
+    font-size: 8px;
+  }
+
+  .cp-stat {
+    font-size: 6px;
+  }
+
+  .cp-hp-label {
+    font-size: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cp-platform-stats {
+    gap: 8px;
+  }
+
+  .cp-stat {
+    font-size: 5px;
+  }
+
+  .cp-hp-bar {
+    height: 12px;
+  }
 }
 
 /* CERTIFICATIONS */
@@ -1107,15 +1319,6 @@ section p {
 
   .certification-info h3 {
     font-size: 13px;
-  }
-
-  .cp-platforms {
-    flex-direction: column;
-  }
-
-  .cp-platform-stats {
-    flex-wrap: wrap;
-    gap: 10px;
   }
 
   .skills-list {

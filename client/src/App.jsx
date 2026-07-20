@@ -312,16 +312,25 @@ function App() {
 
       <section id="competitive">
         <h2>Competitive Programming</h2>
+        <div className="cp-scanlines" />
         <div className="cp-highlights">
           <div className="cp-card cp-highlight">
-            <div className="cp-rank">#1</div>
+            <div className="cp-rank">
+              <span className="cp-rank-icon">👑</span>
+              <span className="cp-rank-text">#1</span>
+            </div>
             <div className="cp-detail">
+              <div className="cp-achievement-badge">ACHIEVEMENT UNLOCKED</div>
               <h3>Intra University Programming Contest</h3>
               <p>Summer 2026 · East West University</p>
             </div>
           </div>
           <div className="cp-card">
+            <div className="cp-rank">
+              <span className="cp-rank-icon">⚔️</span>
+            </div>
             <div className="cp-detail">
+              <div className="cp-achievement-badge">QUEST ACCEPTED</div>
               <h3>NSU-CEC Inter-University Programming Contest</h3>
               <p>Participant · North South University</p>
             </div>
@@ -333,11 +342,15 @@ function App() {
               <span className="cp-platform-name">Codeforces</span>
               <span className="cp-platform-handle">@SouLXeR</span>
             </div>
+            <div className="cp-hp-bar">
+              <div className="cp-hp-fill" style={{ width: "56%" }} />
+              <span className="cp-hp-label">HP 1082/1900</span>
+            </div>
             <div className="cp-platform-stats">
-              <span className="cp-stat"><strong>1082</strong> Rating</span>
-              <span className="cp-stat"><strong>1142</strong> Max</span>
-              <span className="cp-stat"><strong>34</strong> Contests</span>
-              <span className="cp-stat"><strong>312</strong> Solved</span>
+              <span className="cp-stat"><strong>1082</strong> ELO</span>
+              <span className="cp-stat"><strong>1142</strong> MAX</span>
+              <span className="cp-stat"><strong>34</strong> BATTLES</span>
+              <span className="cp-stat"><strong>312</strong> SLAIN</span>
             </div>
           </a>
           <a href="https://www.codechef.com/users/soulxer" target="_blank" rel="noreferrer" className="cp-platform-card">
@@ -345,8 +358,13 @@ function App() {
               <span className="cp-platform-name">CodeChef</span>
               <span className="cp-platform-handle">@soulxer</span>
             </div>
+            <div className="cp-hp-bar">
+              <div className="cp-hp-fill cp-hp-chef" style={{ width: "40%" }} />
+              <span className="cp-hp-label">LVL 2★</span>
+            </div>
             <div className="cp-platform-stats">
-              <span className="cp-stat"><strong>2★</strong> Coder</span>
+              <span className="cp-stat"><strong>2★</strong> RANK</span>
+              <span className="cp-stat"><strong>ACTIVE</strong> GUILD</span>
             </div>
           </a>
           <a href="https://atcoder.jp/users/soulxer" target="_blank" rel="noreferrer" className="cp-platform-card">
@@ -354,10 +372,14 @@ function App() {
               <span className="cp-platform-name">AtCoder</span>
               <span className="cp-platform-handle">@soulxer</span>
             </div>
+            <div className="cp-hp-bar">
+              <div className="cp-hp-fill cp-hp-atcoder" style={{ width: "17%" }} />
+              <span className="cp-hp-label">HP 169/1000</span>
+            </div>
             <div className="cp-platform-stats">
-              <span className="cp-stat"><strong>169</strong> Rating</span>
-              <span className="cp-stat"><strong>174</strong> Max</span>
-              <span className="cp-stat"><strong>4</strong> Rated</span>
+              <span className="cp-stat"><strong>169</strong> ELO</span>
+              <span className="cp-stat"><strong>174</strong> MAX</span>
+              <span className="cp-stat"><strong>4</strong> BATTLES</span>
             </div>
           </a>
         </div>
