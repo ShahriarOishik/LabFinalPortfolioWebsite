@@ -2,6 +2,13 @@
 
 A full-stack portfolio website built with React + Vite (frontend) and Express (backend), featuring a modern dark aesthetic with gamification elements and an 8-bit pixel game themed competitive programming section.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-open-ec4899?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-frontend-beta-six.vercel.app)
+[![Repository](https://img.shields.io/badge/Repository-GitHub-4f46e5?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ShahriarOishik/LabFinalPortfolioWebsite)
+
+## Live Demo
+
+[Open the deployed portfolio](https://portfolio-frontend-beta-six.vercel.app)
+
 ## Tech Stack
 
 | Layer | Technology |
@@ -10,6 +17,20 @@ A full-stack portfolio website built with React + Vite (frontend) and Express (b
 | Backend | Express.js + Node.js |
 | Styling | Custom CSS (no frameworks) |
 | Fonts | Inter, Playfair Display, Press Start 2P |
+
+## Dependencies
+
+### Frontend
+
+- React and React DOM
+- Vite and `@vitejs/plugin-react`
+- Oxlint
+
+### Backend
+
+- Express.js
+- CORS
+- Nodemon for development
 
 ## Sections
 
